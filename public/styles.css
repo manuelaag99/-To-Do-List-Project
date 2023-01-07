@@ -1,0 +1,122 @@
+:root {
+    --var-color-1: rgb(121, 173, 252);
+}
+
+html {
+    background: -webkit-linear-gradient(47deg, rgb(121, 173, 252) 45%, #fff 45%);
+    min-height: 1000px;
+}
+
+body {
+    font-family: 'Acme', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 50px;
+    margin: auto auto 60px;
+    width: 80%;
+}
+
+.sitebox {
+    font-size: 20px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.sitebox, footer {
+    width: 60%;
+}
+
+.top {
+    margin: 40px;
+    background-color: var(--var-color-1);
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+}
+
+.list-item {
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    place-items: center;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background-color: rgb(217, 235, 238);
+    transition-duration: 1s;
+}
+
+.list-item:not(:last-of-type)::after {
+    border-bottom: 2px solid black;
+}
+
+.list-item input {
+    margin: 0 15px;
+}
+
+.list-item input:active {
+    border: #fff;
+}
+
+.add .list-item {
+    margin-bottom: 0;
+}
+
+.add form {
+    width: 100%;
+}
+
+.add input {
+    width: 80%;
+    max-height: 90px;
+    margin-right: 0;
+    font-size: inherit;
+}
+
+.add button {
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    aspect-ratio: 1;
+    width: 8%;
+    background-color: var(--var-color-1);
+    color: #fff;
+    cursor: inherit;
+    padding: 0;
+    font-size: 30px;
+}
+
+.add button:hover {
+    background-color: rgb(56, 134, 250);
+}
+
+.add input, button{
+    font-family: inherit;
+    border: none;
+}
+
+input:checked + p {
+    text-decoration: line-through;
+}
+
+footer {
+    text-align: center;
+    font-weight: light;
+    padding: 15px;
+}
+
+@media (max-width: 900px) {
+    
+}

@@ -1,0 +1,25 @@
+<%- include("header") %> <!--this section calls a layout established on another view-->
+
+<body>
+    <section class="sitebox top">
+        <h1 class="box" id="title"><%=listTitle%></h1>
+    </section>
+    <section class="sitebox list">
+            <%for (var i = 0; i < listOfThings.length; i++) {%> <!--these few lines for control flow (if-else, for, while, etc.) must be surrounded by these particular tags-->
+                <div class="list-item">
+                    <input type="checkbox">
+                    <p> <%=listOfThings[i]%> </p> <!--this one calls values from the list, so it needs the tag made to read values-->
+                </div>
+            <%}%>
+    </section>
+    <section class="sitebox add">
+        <div class="list-item">
+            <form action="/" method="post">
+                <input type="text" name="newItem" placeholder="Write here..." autocomplete="off">
+                <button type="submit" name="button" value= <%=listTitle%>  >+</button>
+            </form>
+        </div>
+    </section> 
+</body>
+
+<%- include("footer") %>
